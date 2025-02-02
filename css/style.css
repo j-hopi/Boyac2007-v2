@@ -1,3 +1,4 @@
+/* Variables globales */
 :root {
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
@@ -11,8 +12,9 @@
     --background-color: #fff;
 }
 
+/* Estilos generales */
 *, *::before, *::after {
-    box-sizing: border-box;
+    box-sizing: border-box !important;
 }
 
 html {
@@ -33,12 +35,18 @@ body {
     background-color: var(--background-color);
 }
 
+/* Estilos generales */
+
 .bg-light {
     background-color: var(--primary-color) !important; 
 }
 
 a.bg-light:hover, a.bg-light:focus, button.bg-light:hover, button.bg-light:focus {
     background-color: var(--secondary-color) !important;
+}
+
+small {
+    font-size: 80%;
 }
 
 small, .small {
@@ -55,6 +63,8 @@ img {
     height: auto;
 }
 
+/* Menú lateral (Sidepanel) */
+
 .openbtn {
     font-size: 20px;
     cursor: pointer;
@@ -64,7 +74,6 @@ img {
     margin-left: 16px;
 }
 
-/* Menú lateral */
 .sidepanel {
     width: 0;
     position: fixed;
@@ -98,6 +107,8 @@ img {
     font-size: 36px;
 }
 
+/* Header */
+
 .header {
     width: 100%;
     padding: 20px 30px;
@@ -106,13 +117,73 @@ img {
     z-index: 999;
 }
 
-/* Botón del menú alineado correctamente */
-#right_button {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
 .logo {
     padding-top: 12px;
+}
+
+/* Banner (Carrusel) */
+.banner_main {
+    background: url(../img/banner3.jpg) no-repeat center center;
+    background-size: cover;
+    min-height: 1150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+/* Contenedor del Carrusel */
+#banner1 {
+    background-color: #003366;
+    border-radius: 15px;
+    padding: 20px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#banner1 .carousel-caption {
+    position: inherit;
+    padding: 0;
+}
+
+#banner1 .carousel-indicators {
+    display: none;
+}
+
+#banner1 .carousel-control-prev,
+#banner1 .carousel-control-next {
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    opacity: 1;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 40px;
+    border: #fff solid 2px;
+}
+
+#banner1 .carousel-control-prev:hover,
+#banner1 .carousel-control-next:hover,
+#banner1 .carousel-control-prev:focus,
+#banner1 .carousel-control-next:focus {
+    background: #000;
+    color: #fff;
+}
+
+#banner1 a.carousel-control-prev {
+    position: absolute;
+    left: inherit;
+    top: 35%;
+    right: 16px;
+}
+
+#banner1 a.carousel-control-next {
+    position: absolute;
+    right: 16px;
+    bottom: 10px;
+    top: 50%;
+}
+
+.banner_slide {
+    padding: 0 80px;
 }
