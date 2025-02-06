@@ -123,13 +123,14 @@ img {
 
 /* Banner (Carrusel) */
 .banner_main {
-    background: url(../img/banner3.jpg) no-repeat center center;
+    background: url(../img/banner4.jpg) no-repeat center center;
     background-size: cover;
     min-height: 1150px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
+    overflow: hidden;
 }
 
 /* Contenedor del Carrusel */
